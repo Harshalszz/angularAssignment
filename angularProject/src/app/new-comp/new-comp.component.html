@@ -1,0 +1,38 @@
+<p>new-comp works!</p>
+<!-- <li *ngFor="let t of todo">
+   
+      <span class="badge">{{t.id}}</span> {{t.title}} 
+      <br>
+      {{t.completed}}
+   
+   
+  </li> -->
+  <div class="justify-content-center">
+    <div>Harshal Zodape Assignment Todo</div>
+  </div>
+  
+
+<div *ngFor="let t of todo" class="row justify-content-center align-items-center">
+
+    <div class="card " style="width: 18rem;" >
+    
+        <div class="card-body">
+          <h5 class="card-title">Todo Number: {{t.id}}</h5>
+          <p class="card-text">{{t.title}}</p>
+          <div *ngIf="t.completed === true">
+            <strong class="card-text text-success">{{t.completed}}</strong>
+          </div>
+
+          <div *ngIf="t.completed === false">
+            <strong class="card-text text-danger">{{t.completed}}</strong>
+          </div>
+          
+          
+        </div>
+      </div>
+    
+      <div class="mb-2"></div>
+
+
+</div>
+  
